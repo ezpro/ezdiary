@@ -35,7 +35,20 @@ public class EZServlet extends HttpServlet {
 	}
 	
 	public void checkParam( HttpServletRequest request,String... params){
-		
+		for (String param:params){
+			String p = request.getParameter(param);
+			if (p == null){
+				throw new LackParamsException(param);
+			}
+		}
+	}
+	
+	public void include(String path,HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException{
+		this.getServletContext().getRequestDispatcher("path").include(request, response);
+	}
+	
+	public void forward(String path,HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException{
+		this.getServletContext().getRequestDispatcher(path).forward(request, response);
 	}
 
 }
