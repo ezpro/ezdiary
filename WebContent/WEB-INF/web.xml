@@ -9,4 +9,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>EZServlet</display-name>
+    <servlet-name>EZServlet</servlet-name>
+    <servlet-class>com.serv.EZServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EZServlet</servlet-name>
+    <url-pattern>/EZServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
