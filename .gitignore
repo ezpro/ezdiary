@@ -3,3 +3,4 @@ build/*
 .project
 .settings/*
 WebContent/WEB-INF/lib/*
+WebContent/resources/*
