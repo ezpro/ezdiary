@@ -1,4 +1,4 @@
-package serv;
+package com.serv;
 
 public class ListSomeDiary {
 
